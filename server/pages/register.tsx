@@ -8,7 +8,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material'
-import { useState } from 'react'
+import { useState, ChangeEvent } from 'react'
 import Link from 'next/link'
 
 const Register = () => {
@@ -48,7 +48,7 @@ const Register = () => {
                   label = "Name"
                   autoFocus
                   value = {name}
-                  onChange = {(e) => setName(e.target.value)}
+                  onChange = {(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                 />
               </Grid>
 
@@ -60,7 +60,7 @@ const Register = () => {
                   label = "Email Address"
                   name = "email"
                   value = {email}
-                  onChange = {(e) => setEmail(e.target.value)}
+                  onChange = {(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                 />
               </Grid>
 
@@ -73,7 +73,7 @@ const Register = () => {
                   type = "password"
                   id = "password"
                   value = {password}
-                  onChange = {(e) => setPassword(e.target.value)}
+                  onChange = {(e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                 />
               </Grid>
             </Grid>
